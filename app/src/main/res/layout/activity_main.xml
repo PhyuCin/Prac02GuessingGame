@@ -14,10 +14,10 @@
         android:background="#FFFFFF">
 
         <TextView
+            android:id="@+id/statusText"
             android:layout_width="310dp"
             android:layout_height="160dp"
             android:padding="@dimen/defaultPadding"
-            android:text="@string/initialStatus"
             android:textColor="@color/defaultFontColor"
             android:textColorLink="@color/defaultFontColor"
             android:textSize="@dimen/defaultFontSize"
@@ -27,6 +27,8 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
+            android:inputType="number"
+            android:id="@+id/guessNum"
             android:layout_width="132dp"
             android:layout_height="160dp"
             android:background="#ebccff"

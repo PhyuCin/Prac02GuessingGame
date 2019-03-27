@@ -7,7 +7,7 @@
 
     <string name="mainButtonText">Edit the max and min numbers</string>
     <string name="secondaryButtonText">Go back to the game</string>
-    <string name="min">Min number</string>
-    <string name="max">Max number</string>
+    <string name="min">Min</string>
+    <string name="max">Max</string>
 
 </resources>
