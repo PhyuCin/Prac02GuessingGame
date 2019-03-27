@@ -9,7 +9,8 @@ import android.view.View;
 import android.widget.SeekBar;
 
 public class SecondaryActivity extends AppCompatActivity{
-    private SeekBar seekbar;
+    private SeekBar seekbarMin;
+    private SeekBar seekbarMax;
     private SharedPreferences preferences;
 
     @Override
@@ -17,8 +18,8 @@ public class SecondaryActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_secondary);
 
-        seekbar = (SeekBar) findViewById(R.id.simpleSeekBarMin);
-        seekbar = (SeekBar) findViewById(R.id.simpleSeekBarMax);
+        seekbarMin = (SeekBar) findViewById(R.id.simpleSeekBarMin);
+        seekbarMax = (SeekBar) findViewById(R.id.simpleSeekBarMax);
 
         preferences = getSharedPreferences("value", MODE_PRIVATE);
         Log.i("Secondary", "on create called");
@@ -29,13 +30,20 @@ public class SecondaryActivity extends AppCompatActivity{
     protected void onStart(){
         super.onStart();
         Log.i("Secondary", "on start called");
-        preferences.edit().putInt("seek bar", seekbar.getProgress()).apply();
+
+        int progressMin = preferences.getInt("seek bar min", 0);
+        seekbarMin.setProgress(progressMin);
+        int progressMax = preferences.getInt("seek bar max", 0);
+        seekbarMax.setProgress(progressMax);
     }
 
-
-    public void handler(View view){
-        Intent intent = new Intent(this,MainActivity.class );
-        startActivity(intent);}
+    @Override
+    protected void onStop(){
+        super.onStop();
+        Log.i("Secondary", "on stop called");
+        preferences.edit().putInt("seek bar min", seekbarMin.getProgress()).apply();
+        preferences.edit().putInt("seek bar max", seekbarMax.getProgress()).apply();
+    }
 
     @Override
     protected void onDestroy(){
@@ -43,5 +51,9 @@ public class SecondaryActivity extends AppCompatActivity{
         Log.i("Secondary", "on create called");
 
     }
+
+    public void handler(View view){
+        Intent intent = new Intent(this,MainActivity.class );
+        startActivity(intent);}
 
 }
