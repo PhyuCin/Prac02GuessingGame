@@ -27,8 +27,9 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:layout_width="98dp"
+            android:layout_width="132dp"
             android:layout_height="160dp"
+            android:background="#ebccff"
             android:padding="@dimen/defaultPadding"
             android:textColor="@color/defaultFontColor"
             android:textColorLink="@color/defaultFontColor" />
@@ -36,11 +37,15 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button_id"
+        android:id="@+id/mainButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/defaultPadding"
         android:text="@string/mainButtonText"
-        android:textSize="@dimen/buttonTextSize" />
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/buttonTextSize"
+        android:backgroundTint="#9900cc"
+        android:onClick="handler"
+        tools:ignore="UnusedAttribute" />
 
 </LinearLayout>

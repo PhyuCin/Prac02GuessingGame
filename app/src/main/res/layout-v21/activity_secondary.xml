@@ -58,7 +58,7 @@
         android:padding="@dimen/defaultPadding"
         android:text="@string/secondaryButtonText"
         android:textSize="@dimen/buttonTextSize"
-        android:textColor="#FFFFFF"
-        android:backgroundTint="#9900cc"/>
+        android:backgroundTint="#9900cc"
+        android:onClick="handler" />
 
 </LinearLayout>
