@@ -82,11 +82,12 @@
         android:textColor="#FFFFFF"/>
 
     <TextView
+        android:id="@+id/errorMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/errorMessage"
-        android:textSize="@dimen/defaultFontSize"
-        android:padding="@dimen/defaultPadding"/>
+        android:gravity="center"
+        android:padding="@dimen/defaultPadding"
+        android:textSize="18sp" />
 
 
 </LinearLayout>

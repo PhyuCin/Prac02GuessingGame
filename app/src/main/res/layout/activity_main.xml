@@ -31,13 +31,12 @@
             android:id="@+id/guessNum"
             android:layout_width="100dp"
             android:layout_height="160dp"
-            android:gravity="center"
+            android:importantForAutofill="no"
             android:inputType="number"
             android:padding="@dimen/defaultPadding"
             android:textColor="@color/defaultFontColor"
             android:textColorLink="@color/defaultFontColor"
             android:textSize="@dimen/defaultFontSize"
-            android:importantForAutofill="no"
             tools:ignore="LabelFor,UnusedAttribute" />
 
     </LinearLayout>
