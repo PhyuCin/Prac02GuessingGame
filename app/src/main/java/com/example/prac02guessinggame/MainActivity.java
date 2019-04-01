@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         minNum = findViewById(R.id.minNum);
         maxNum = findViewById((R.id.maxNum));
         secretNum = findViewById(R.id.secretNum);
@@ -39,21 +38,23 @@ public class MainActivity extends AppCompatActivity {
         guessNum.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence string, int start, int count, int after) {
+
             }
 
             @Override
             public void onTextChanged(CharSequence string, int start, int before, int count) {
+
                 int value = Integer.parseInt(string.toString());
 
-                    if (secretNumber == value){
-                        statusText.setText(getString(R.string.statusCorrect));
+                if (secretNumber == value){
+                    statusText.setText(getString(R.string.statusCorrect));
                 }
-                    else if (secretNumber > value){
-                        statusText.setText(getString(R.string.statusBigger));
-                    }
-                    else {
-                        statusText.setText(getString(R.string.statusSmaller));
-                    }
+                else if (secretNumber > value){
+                    statusText.setText(getString(R.string.statusBigger));
+                }
+                else {
+                    statusText.setText(getString(R.string.statusSmaller));
+                }
 
             }
 
@@ -72,8 +73,8 @@ public class MainActivity extends AppCompatActivity {
         secretNumber = random.nextInt((max - min) + 1) + min;
 
         minNum.setText("" + min);
-        maxNum.setText("" + max);
-        secretNum.setText("" + secretNumber);
+        maxNum.setText(" " + max);
+        secretNum.setText(" " + secretNumber);
 
     }
 
