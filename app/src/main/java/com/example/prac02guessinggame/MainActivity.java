@@ -14,9 +14,9 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     private TextView statusText;
-    private TextView minNum;
-    private TextView maxNum;
-    private TextView secretNum;
+    //private TextView minNum;
+    //private TextView maxNum;
+    //private TextView secretNum;
     private SharedPreferences preferences;
 
     private int secretNumber;
@@ -25,9 +25,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        minNum = findViewById(R.id.minNum);
-        maxNum = findViewById((R.id.maxNum));
-        secretNum = findViewById(R.id.secretNum);
+        //minNum = findViewById(R.id.minNum);
+        //maxNum = findViewById((R.id.maxNum));
+        //secretNum = findViewById(R.id.secretNum);
 
 
         preferences = getSharedPreferences("value", MODE_PRIVATE);
