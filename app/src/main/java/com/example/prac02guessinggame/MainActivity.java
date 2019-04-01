@@ -34,17 +34,18 @@ public class MainActivity extends AppCompatActivity {
         statusText = findViewById(R.id.statusText);
         EditText guessNum = findViewById(R.id.guessNum);
 
-        statusText.setText(getString(R.string.initialStatus));
         guessNum.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence string, int start, int count, int after) {
-
+                statusText.setText(getString(R.string.initialStatus));
             }
 
             @Override
             public void onTextChanged(CharSequence string, int start, int before, int count) {
 
-                int value = Integer.parseInt(string.toString());
+                try{
+                    int value = Integer.parseInt(string.toString());
+
 
                 if (secretNumber == value){
                     statusText.setText(getString(R.string.statusCorrect));
@@ -56,7 +57,11 @@ public class MainActivity extends AppCompatActivity {
                     statusText.setText(getString(R.string.statusSmaller));
                 }
 
-            }
+                } catch(Exception e){
+                    //
+                }
+
+                }
 
             @Override
             public void afterTextChanged(Editable string) {
