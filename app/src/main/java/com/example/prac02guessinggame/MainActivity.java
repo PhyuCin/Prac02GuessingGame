@@ -14,6 +14,9 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     private TextView statusText;
+    private TextView minNum;
+    private TextView maxNum;
+    private TextView secretNum;
     private SharedPreferences preferences;
 
     private int secretNumber;
@@ -22,7 +25,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        minNum = findViewById(R.id.minNum);
+        maxNum = findViewById((R.id.maxNum));
+        secretNum = findViewById(R.id.secretNum);
 
+
+        preferences = getSharedPreferences("value", MODE_PRIVATE);
         statusText = findViewById(R.id.statusText);
         EditText guessNum = findViewById(R.id.guessNum);
 
@@ -58,12 +66,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void onStart(){
         super.onStart();
-        preferences = getSharedPreferences("value", MODE_PRIVATE);
-        int progressMin = preferences.getInt("seek bar min", 0);
-        int progressMax = preferences.getInt("seek bar max", 0);
+        int min = preferences.getInt("seek bar min", 0);
+        int max = preferences.getInt("seek bar max", 0);
 
         Random random = new Random();
-        secretNumber = progressMin+ random.nextInt(progressMax);
+        secretNumber = random.nextInt((max - min) + 1) + min;
+
+        minNum.setText("" + min);
+        maxNum.setText(" " + max);
+        secretNum.setText(" " + secretNumber);
+
     }
 
     public void toEdit(View view){

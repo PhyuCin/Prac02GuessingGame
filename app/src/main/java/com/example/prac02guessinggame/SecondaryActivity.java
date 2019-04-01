@@ -43,6 +43,7 @@ public class SecondaryActivity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 progressMin.setText("" + progress);
+                preferences.edit().putInt("seek bar min", seekBarMin.getProgress()).apply();
             }
 
             @Override
@@ -61,6 +62,7 @@ public class SecondaryActivity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 progressMax.setText("" + progress);
+                preferences.edit().putInt("seek bar max", seekBarMax.getProgress()).apply();
             }
 
             @Override
@@ -85,6 +87,7 @@ public class SecondaryActivity extends AppCompatActivity {
     protected void onStop(){
         super.onStop();
         Log.i("Secondary", "on stop called");
+
         preferences.edit().putInt("seek bar min", seekBarMin.getProgress()).apply();
         preferences.edit().putInt("seek bar max", seekBarMax.getProgress()).apply();
 

@@ -34,7 +34,6 @@
             android:gravity="center"
             android:inputType="number"
             android:padding="@dimen/defaultPadding"
-            android:text="@string/placeHolder"
             android:textColor="@color/defaultFontColor"
             android:textColorLink="@color/defaultFontColor"
             android:textSize="@dimen/defaultFontSize"
@@ -54,5 +53,26 @@
         android:textColor="#FFFFFF"
         android:textSize="@dimen/buttonTextSize"
         tools:ignore="UnusedAttribute" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/minNum"
+        android:textSize="@dimen/defaultFontSize"
+        android:padding="@dimen/defaultPadding"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/maxNum"
+        android:textSize="@dimen/defaultFontSize"
+        android:padding="@dimen/defaultPadding"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/secretNum"
+        android:textSize="@dimen/defaultFontSize"
+        android:padding="@dimen/defaultPadding"/>
 
 </LinearLayout>
