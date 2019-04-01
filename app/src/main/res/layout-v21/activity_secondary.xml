@@ -81,5 +81,12 @@
         android:backgroundTint="#9900cc"
         android:textColor="#FFFFFF"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/errorMessage"
+        android:textSize="@dimen/defaultFontSize"
+        android:padding="@dimen/defaultPadding"/>
+
 
 </LinearLayout>

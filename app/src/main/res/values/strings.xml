@@ -9,6 +9,7 @@
     <string name="secondaryButtonText">Go back to the game</string>
     <string name="min">Min</string>
     <string name="max">Max</string>
+    <string name="errorText">Min number must be smaller than Max number</string>
 
 
 
