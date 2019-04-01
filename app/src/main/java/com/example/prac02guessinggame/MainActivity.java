@@ -72,9 +72,9 @@ public class MainActivity extends AppCompatActivity {
         Random random = new Random();
         secretNumber = random.nextInt((max - min) + 1) + min;
 
-        minNum.setText("" + min);
-        maxNum.setText(" " + max);
-        secretNum.setText(" " + secretNumber);
+        //minNum.setText("" + min);
+        //maxNum.setText(" " + max);
+        //secretNum.setText(" " + secretNumber);
 
     }
 
