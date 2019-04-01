@@ -88,9 +88,6 @@ public class SecondaryActivity extends AppCompatActivity {
         super.onStop();
         Log.i("Secondary", "on stop called");
 
-        preferences.edit().putInt("seek bar min", seekBarMin.getProgress()).apply();
-        preferences.edit().putInt("seek bar max", seekBarMax.getProgress()).apply();
-
     }
 
     @Override
