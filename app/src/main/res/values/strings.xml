@@ -5,9 +5,10 @@
     <string name="statusBigger">Try bigger</string>
     <string name="statusCorrect">You won!</string>
 
-    <string name="mainButtonText">Edit the max and min numbers</string>
+    <string name="mainButtonText">Edit</string>
     <string name="secondaryButtonText">Go back to the game</string>
     <string name="min">Min</string>
     <string name="max">Max</string>
+    <string name="placeHolder">____</string>
 
 </resources>
