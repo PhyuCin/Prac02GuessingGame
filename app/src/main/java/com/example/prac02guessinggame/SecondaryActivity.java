@@ -38,6 +38,7 @@ public class SecondaryActivity extends AppCompatActivity {
         super.onStart();
         Log.i("Secondary", "on start called");
 
+        //deals with min seek bar change
         seekBarMin.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @SuppressLint("SetTextI18n")
             @Override
@@ -57,7 +58,8 @@ public class SecondaryActivity extends AppCompatActivity {
             }
         });
 
-        seekBarMax.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+        //deals with max seek bar change
+        seekBarMax.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
             @SuppressLint("SetTextI18n")
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -97,6 +99,7 @@ public class SecondaryActivity extends AppCompatActivity {
 
     }
 
+    //goes to main when button is pressed
     public void toMain(View view){
         Intent intent = new Intent(this, MainActivity.class );
         startActivity(intent);

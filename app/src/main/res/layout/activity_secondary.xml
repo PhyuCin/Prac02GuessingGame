@@ -1,64 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:gravity="center"
     android:orientation="vertical">
 
+    <!--for min-->
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:orientation="horizontal"
-        android:background="#FFFFFF">
+        android:layout_width="350sp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <TextView
-            android:layout_width="200dp"
+            android:layout_width="80sp"
             android:layout_height="wrap_content"
             android:padding="@dimen/defaultPadding"
             android:text="@string/min"
             android:textColor="@color/defaultFontColor"
-            android:textColorLink="@color/defaultFontColor"
             android:textSize="@dimen/defaultFontSize" />
 
+        <!--min seek bar-->
         <SeekBar
-            android:id="@+id/simpleSeekBarMin"
-            android:layout_width="213dp"
+            android:id="@+id/seekBarMin"
+            android:layout_width="190sp"
             android:layout_height="match_parent"
-            android:background="#ebccff" />
+            android:padding="@dimen/defaultPadding"
+            tools:layout_editor_absoluteX="184dp"
+            tools:layout_editor_absoluteY="292dp" />
+
+        <!--display number from the min seek bar -->
+        <TextView
+            android:id="@+id/progressMin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/defaultPadding"
+            android:text="@string/initialNum"
+            android:textSize="@dimen/defaultFontSize"
+            android:textColor="@color/defaultFontColor"/>
 
     </LinearLayout>
 
+    <!--for max-->
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:orientation="horizontal"
-        android:background="#FFFFFF">
+        android:layout_width="350sp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <TextView
-            android:layout_width="200dp"
-            android:layout_height="100dp"
+            android:layout_width="80sp"
+            android:layout_height="wrap_content"
             android:padding="@dimen/defaultPadding"
             android:text="@string/max"
             android:textColor="@color/defaultFontColor"
-            android:textColorLink="@color/defaultFontColor"
             android:textSize="@dimen/defaultFontSize" />
 
+        <!--max seek bar-->
         <SeekBar
-            android:id="@+id/simpleSeekBarMax"
-            android:layout_width="213dp"
+            android:id="@+id/seekBarMax"
+            android:layout_width="190sp"
             android:layout_height="match_parent"
-            android:background="#ebccff" />
+            android:padding="@dimen/defaultPadding"
+            tools:layout_editor_absoluteX="184dp"
+            tools:layout_editor_absoluteY="292dp" />
+
+        <!--display number from the max seek bar -->
+        <TextView
+            android:id="@+id/progressMax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/defaultPadding"
+            android:textColor="@color/defaultFontColor"
+            android:textSize="@dimen/defaultFontSize"
+            android:text="@string/initialNum"/>
 
     </LinearLayout>
 
+    <!--for going to main-->
     <Button
-        android:id="@+id/secondaryButton"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:text="@string/secondaryButtonText"
+        android:onClick="toMain"
+        android:backgroundTint="#9900cc"
+        android:textColor="#FFFFFF"/>
+
+    <!--displays error message when needed-->
+    <TextView
+        android:id="@+id/errorMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:padding="@dimen/defaultPadding"
-        android:text="@string/secondaryButtonText"
-        android:textSize="@dimen/buttonTextSize"
-        android:textColor="#FFFFFF"
-        android:backgroundTint="#9900cc"/>
+        android:textSize="18sp" />
+
 
 </LinearLayout>

@@ -32,14 +32,16 @@ public class MainActivity extends AppCompatActivity {
 
         preferences = getSharedPreferences("value", MODE_PRIVATE);
         statusText = findViewById(R.id.statusText);
-        EditText guessNum = findViewById(R.id.guessNum);
 
+        //deals with user input
+        EditText guessNum = findViewById(R.id.guessNum);
         guessNum.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence string, int start, int count, int after) {
                 statusText.setText(getString(R.string.initialStatus));
             }
 
+            //compare user input with the secret number
             @Override
             public void onTextChanged(CharSequence string, int start, int before, int count) {
 
@@ -77,12 +79,14 @@ public class MainActivity extends AppCompatActivity {
         Random random = new Random();
         secretNumber = random.nextInt((max - min) + 1) + min;
 
+        //testing values
         //minNum.setText("" + min);
         //maxNum.setText(" " + max);
         //secretNum.setText(" " + secretNumber);
 
     }
 
+    //goes to secondary activity when button is pressed
     public void toEdit(View view){
         Intent intent = new Intent(this,SecondaryActivity.class );
         startActivity(intent);

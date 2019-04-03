@@ -11,8 +11,10 @@
     <LinearLayout
         android:layout_width="350sp"
         android:layout_height="150dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="@dimen/defaultPadding">
 
+        <!--for displaying status-->
         <TextView
             android:id="@+id/statusText"
             android:layout_width="250dp"
@@ -27,20 +29,23 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <!--for getting user input-->
         <EditText
             android:id="@+id/guessNum"
             android:layout_width="100dp"
-            android:layout_height="160dp"
+            android:layout_height="100dp"
             android:importantForAutofill="no"
             android:inputType="number"
             android:padding="@dimen/defaultPadding"
             android:textColor="@color/defaultFontColor"
             android:textColorLink="@color/defaultFontColor"
             android:textSize="@dimen/defaultFontSize"
-            tools:ignore="LabelFor,UnusedAttribute" />
+            tools:ignore="LabelFor,UnusedAttribute"
+            android:background="#f2e6ff"/>
 
     </LinearLayout>
 
+    <!--for going to secondary activity-->
     <Button
         android:layout_width="150sp"
         android:layout_height="wrap_content"
@@ -53,6 +58,8 @@
         android:textSize="@dimen/buttonTextSize"
         tools:ignore="UnusedAttribute" />
 
+
+    <!--displaying numbers to test if the results are correct-->
     <!--<TextView-->
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="wrap_content"-->

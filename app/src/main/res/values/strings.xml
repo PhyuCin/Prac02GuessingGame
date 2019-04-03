@@ -9,7 +9,8 @@
     <string name="secondaryButtonText">Main</string>
     <string name="min">Min</string>
     <string name="max">Max</string>
-    <string name="errorText">Min number must be smaller than Max number</string>
+    <string name="errorText1">Min is bigger than Max. Min number must be smaller than Max number.</string>
+    <string name="errorText2">Min is equal to Max. Min number must be smaller than Max number.</string>
     <string name="initialNum">0</string>
 
 
