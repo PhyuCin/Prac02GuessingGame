@@ -6,10 +6,11 @@
     <string name="statusCorrect">You won!</string>
 
     <string name="mainButtonText">Edit</string>
-    <string name="secondaryButtonText">Go back to the game</string>
+    <string name="secondaryButtonText">Main</string>
     <string name="min">Min</string>
     <string name="max">Max</string>
     <string name="errorText">Min number must be smaller than Max number</string>
+    <string name="initialNum">0</string>
 
 
 

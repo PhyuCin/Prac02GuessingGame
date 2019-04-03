@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="@dimen/defaultPadding"
-            android:text="0"
+            android:text="@string/initialNum"
             android:textSize="@dimen/defaultFontSize"
             android:textColor="@color/defaultFontColor"/>
 
@@ -67,16 +67,16 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="@dimen/defaultPadding"
-            android:text="0"
             android:textColor="@color/defaultFontColor"
-            android:textSize="@dimen/defaultFontSize" />
+            android:textSize="@dimen/defaultFontSize"
+            android:text="@string/initialNum"/>
 
     </LinearLayout>
 
     <Button
         android:layout_width="150sp"
         android:layout_height="wrap_content"
-        android:text="Main"
+        android:text="@string/secondaryButtonText"
         android:onClick="toMain"
         android:backgroundTint="#9900cc"
         android:textColor="#FFFFFF"/>

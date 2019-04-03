@@ -53,25 +53,25 @@
         android:textSize="@dimen/buttonTextSize"
         tools:ignore="UnusedAttribute" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/minNum"
-        android:textSize="@dimen/defaultFontSize"
-        android:padding="@dimen/defaultPadding"/>
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/minNum"-->
+        <!--android:textSize="@dimen/defaultFontSize"-->
+        <!--android:padding="@dimen/defaultPadding"/>-->
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/maxNum"
-        android:textSize="@dimen/defaultFontSize"
-        android:padding="@dimen/defaultPadding"/>
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/maxNum"-->
+        <!--android:textSize="@dimen/defaultFontSize"-->
+        <!--android:padding="@dimen/defaultPadding"/>-->
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/secretNum"
-        android:textSize="@dimen/defaultFontSize"
-        android:padding="@dimen/defaultPadding"/>
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/secretNum"-->
+        <!--android:textSize="@dimen/defaultFontSize"-->
+        <!--android:padding="@dimen/defaultPadding"/>-->
 
 </LinearLayout>
